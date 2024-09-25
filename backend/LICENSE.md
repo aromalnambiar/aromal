@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 [Muhammad Fiaz](https://github.com/muhammad-fiaz)
+Copyright (c) 2023 [Aromal Nambiar](https://github.com/aromalnambiar)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

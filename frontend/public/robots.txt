@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: *
+
+# Host
+Host: https://aromalnambiar.com
+Host: https://www.aromalnambiar.com
+
+# Sitemaps
+Sitemap: https://aromalnambiar.com/sitemap.xml
+Sitemap: https://aromalnambiar.com/sitemap-0.xml

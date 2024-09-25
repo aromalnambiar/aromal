@@ -1,0 +1,19 @@
+[
+  {
+    "title": "aromalnambiar.com",
+    "pubDate": "2023-07-05",
+    "link": "https://github.com/aromalnambiar/portfolio#readme",
+    "author": "Aromal Nambiar",
+    "thumbnail": "/img/jobs.png",
+    "categories": ["Portfolio", "Website", "Blog","personal"]
+  },
+  {
+    "title": "logly",
+    "pubDate": "2023-12-29",
+    "link": "https://github.com/aromalnambiar/logly#readme",
+    "author": "Aromal Nambiar",
+    "thumbnail": "/img/logly.png",
+    "categories": ["Python","logging"]
+  }
+
+]
