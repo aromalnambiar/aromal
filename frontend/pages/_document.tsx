@@ -233,8 +233,8 @@ export default function Document() {
             },{
               "@type": "ListItem",
               "position": 3,
-              "name": "Articles",
-              "item": "https://aromalnambiar.com/articles"
+              "name": "Blogs",
+              "item": "https://aromalnambiar.com/blogs"
             },{
               "@type": "ListItem",
               "position": 4,

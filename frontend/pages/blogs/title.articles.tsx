@@ -8,7 +8,7 @@ export default function TitleArticles() {
             <meta charSet="utf-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-            <title>Articles by Aromal Nambiar</title>
+            <title>Blogs by Aromal Nambiar</title>
             <meta name="description" content="Explore articles authored by Aromal Nambiar, a Full Stack Engineer and Developer." />
 
             {/*These are the Keywords that will Boost your SEO in Ranking, so Make Sure to include and Update it up to your preference or don't mind this! 😴*/}

@@ -27,20 +27,21 @@ interface RecentArticlesProps {
 // RecentArticles component
 const RecentArticles: React.FC<RecentArticlesProps> = ({ mediumArticles }) => {
 	// Extract feed and articles from the props
-	const { feed, items: articles } = mediumArticles;
+	 const { feed, items = [] } = mediumArticles || {};
+	const articles: any = [];
 
 	return (
 		<Section classProp="borderBottom">
 			<Container spacing={['verticalXXXXLrg']}>
 				{/* Section title */}
 				<SectionTitle
-					title="Recent Medium Articles"
+					title="Blogs"
 					preTitle="Informative"
 					subTitle="A personal quest to become a better creative writer."
 				/>
 				{/* Article section */}
 				<section className={css.projects}>
-					{articles.map(({ title, pubDate, link, author, thumbnail, categories }, index) => {
+					{articles.map(({ title, pubDate, link, author, thumbnail, categories }: any, index: number) => {
 						// Format the article date
 						const date = new Date(pubDate).toDateString();
 						return (
@@ -64,7 +65,7 @@ const RecentArticles: React.FC<RecentArticlesProps> = ({ mediumArticles }) => {
                                 </span>
 								{/* Article categories (topics) */}
 								<span className={css.topicsContainer}>
-                                    {categories.map((e, index) => (
+                                    {categories.map((e: any, index: any) => (
 										<span key={index} className={css.topics}>
                                             <Icon icon={['fab', 'medium']} /> {e}
                                         </span>
