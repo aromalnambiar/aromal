@@ -1,5 +1,3 @@
-
-
 const GitRecentProjects   = dynamic(import ('../../src/components/sections/projects/recent'));
 const FeaturedProjects  = dynamic(import ( '../../src/components/sections/projects/featured'));
 import dynamic from "next/dynamic";
@@ -30,8 +28,7 @@ export async function getServerSideProps({ res }) {
 	)
 
 	const [ gitUserRes, gitReposRes] = await Promise.all( [
-		fetch(`https://api.github.com/users/${settings.username.github}`),
-		fetch(`https://api.github.com/users/${settings.username.github}/repos`),
+		 
 	] )
 	
 	let [ user, repos] = await Promise.all( [

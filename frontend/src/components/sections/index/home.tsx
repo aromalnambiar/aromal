@@ -3,6 +3,8 @@
 import Image from 'next/image'
 
 // Imports
+import HeroBg from '../../blocks/hero.bg/section-bg-color';
+
 import Section from '../../structure/section';
 import Container from '../../structure/container';
 
@@ -21,11 +23,12 @@ export default function Home() {
 				<SectionTitle
 					title="About Me"
 					preTitle="Synopsis"
-					subTitle="From an early age, my passion for creating new things has been a driving force. Immersed in the world of design and coding, I honed my skills and explored innovative solutions. This love for creation has shaped my career, fueling my desire to bring impactful and visually stunning projects to life. With meticulous attention to detail and a keen eye for aesthetics, I strive to craft exceptional and memorable experiences."
+					subTitle="I'm a passionate software engineer with two years of experience, skilled in various programming languages and technologies. I focus on delivering high-quality solutions that meet user needs, on time and within budget. A quick learner who thrives on new challenges, I value teamwork and believe communication is key to project success. Excited to keep growing and contribute to innovative projects."
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
-						<Image src="-" width={600} height={800} alt="Aromal Nambiar"   loading="eager" />
+						<Image src="/img/myimage.png" width={600} height={800} alt="Aromal Nambiar" loading="eager" />
+						
 					</div>
 					<div className={about.copy}>
 						<CopyBlock
@@ -76,6 +79,7 @@ export default function Home() {
 					</div>
 				</section>
 			</Container>
+			
 		</Section>
 	)
 }

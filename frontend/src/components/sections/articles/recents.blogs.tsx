@@ -46,7 +46,7 @@ const DevToRecent: React.FC<DevToRecentProps> = ({ devToArticles }) => {
                             <article key={id} className={css.project}>
                                 <span className={css.featuredImage}>
                                     {cover_image ? (
-                                        <Image src={cover_image} height={400} width={600} alt="Article thumbnail" loading="eager" />
+                                        <Image src="/img/noimageavailable.jpg" height={400} width={600} alt="Article thumbnail" loading="eager" />
                                     ) : (
                                         <Image src="/img/noimageavailable.jpg" height={400} width={600} alt="Default thumbnail" loading="eager" />
                                     )}

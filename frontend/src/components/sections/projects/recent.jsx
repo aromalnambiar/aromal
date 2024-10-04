@@ -12,14 +12,14 @@ export default function GitProjects({ repos, user }) {
 			<Container classProp={css.container} spacing={'verticalXXXLrg'}>
 				<h3>Recent Projects</h3>
 				<section className={css.profile}>
-					<Image
+					{/* <Image
 						className={css.profilePhoto}
 						src={`${user[0]?.avatar_url}`}
 						alt="Github Profile Photo"
 						height={60}
 						width={60}
 						loading="eager"
-					/>
+					/> */}
 					<span className={css.details}>
             <p>{user[0]?.name}</p>
             <a href={user[0]?.html_url} rel="noreferrer" target="_blank">
