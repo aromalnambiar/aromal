@@ -1,30 +1,33 @@
-
-import React, {useEffect, useState} from 'react';
-import {IconName, IconPrefix, library} from '@fortawesome/fontawesome-svg-core';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {fas} from '@fortawesome/pro-solid-svg-icons';
-import {fat} from '@fortawesome/pro-thin-svg-icons';
-import {fal} from '@fortawesome/pro-light-svg-icons';
-import {fad} from '@fortawesome/pro-duotone-svg-icons';
-import {far} from '@fortawesome/pro-regular-svg-icons';
-import {fab} from '@fortawesome/free-brands-svg-icons';
-
-// Icons
-library.add(fat, fal, fas, fad, far, fab);
+import React, { useEffect, useState } from 'react';
+import { CheckIcon, XIcon, HomeIcon, InformationCircleIcon } from '@heroicons/react/solid';
 
 interface IconProps {
-	icon: [IconPrefix, IconName];
+	icon: string; // Changed to string to represent icon names directly
 }
 
 const Icon: React.FC<IconProps> = ({ icon }) => {
-	const [iconType, iconKey] = icon;
-	const [stateIconKey, setIconKey] = useState<IconName>('circle-notch');
+	const [stateIconKey, setIconKey] = useState<string>('HomeIcon'); // Default to one of the available icons
 
 	useEffect(() => {
-		setIconKey(iconKey as IconName);
-	}, [iconKey]);
+		setIconKey(icon);
+	}, [icon]);
 
-	return <FontAwesomeIcon icon={[iconType as IconPrefix, stateIconKey]} />;
+	const renderIcon = () => {
+		switch (stateIconKey) {
+			case 'CheckIcon':
+				return <CheckIcon className="h-6 w-6 text-green-500" />;
+			case 'XIcon':
+				return <XIcon className="h-6 w-6 text-red-500" />;
+			case 'HomeIcon':
+				return <HomeIcon className="h-6 w-6 text-blue-500" />;
+			case 'InformationCircleIcon':
+				return <InformationCircleIcon className="h-6 w-6 text-gray-500" />;
+			default:
+				return <HomeIcon className="h-6 w-6 text-gray-500" />; // Fallback icon
+		}
+	};
+
+	return renderIcon();
 };
 
 export default Icon;
