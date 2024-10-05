@@ -34,7 +34,7 @@ export default function Recent({ }) {
                                     <Image src={thumbnail} alt="Documentation thumbnail" height={300} width={300}  loading="eager" />
 								</span>
                                         <span className={css.header}>
-									<a href={link} rel="noreferrer" target="_blank">{title} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
+									{/* <a href={link} rel="noreferrer" target="_blank">{title} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a> */}
 								</span>
                                         <span className={css.descriptionContainer}>
 								</span>
@@ -45,7 +45,9 @@ export default function Recent({ }) {
                                         <span className={css.topicsContainer}>
 									{
                                         categories.map( (e, index) => {
-                                            return ( <span key={index} className={css.topics}><Icon icon={[ 'fab', 'medium' ]} /> {e}</span> )
+                                            return ( <span key={index} className={css.topics}>
+                                                {/* <Icon icon={[ 'fab', 'medium' ]} />  */}
+                                                {e}</span> )
                                         })
                                     }
 								</span>

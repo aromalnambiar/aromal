@@ -53,7 +53,7 @@ const DevToRecent: React.FC<DevToRecentProps> = ({ devToArticles }) => {
                                 </span>
                                 <span className={css.header}>
                                     <a href="" rel="noreferrer" target="_blank">
-                                        {title} <Icon icon={['fad', 'arrow-up-right-from-square']} />
+                                        {/* {title} <Icon icon={['fad', 'arrow-up-right-from-square']} /> */}
                                     </a>
                                 </span>
                                 <span className={css.descriptionContainer}>

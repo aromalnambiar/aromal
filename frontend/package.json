@@ -7,7 +7,8 @@
     "test": "jest --watch",
     "export": "next export",
     "sitemap": "next-sitemap --config next-sitemap.config.ts",
-    "build-webpack": "webpack --mode production"
+    "build-webpack": "webpack --mode production",
+    "clean": "del /q /s .next"
   },
   "dependencies": {
     "@dotlottie/player-component": "^2.7.12",

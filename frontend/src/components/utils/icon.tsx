@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { CheckIcon, XIcon, HomeIcon, InformationCircleIcon } from '@heroicons/react/solid';
+import { CheckIcon, XIcon, HomeIcon, InformationCircleIcon } from '@heroicons/react/24/solid';
 
 interface IconProps {
-	icon: string; // Changed to string to represent icon names directly
+	icon: 'CheckIcon' | 'XIcon' | 'HomeIcon' | 'InformationCircleIcon'; // Restricting to known icon names
 }
 
 const Icon: React.FC<IconProps> = ({ icon }) => {
-	const [stateIconKey, setIconKey] = useState<string>('HomeIcon'); // Default to one of the available icons
+	const [stateIconKey, setIconKey] = useState<IconProps['icon']>('HomeIcon'); // Default to HomeIcon
 
 	useEffect(() => {
 		setIconKey(icon);

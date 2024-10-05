@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowUpIcon } from '@heroicons/react/solid'; // Import the ArrowUpIcon from Heroicons
+import { ArrowUpIcon } from '@heroicons/react/24/solid'; // Import the ArrowUpIcon from Heroicons
 
 // This will show a "Back to Top" button when the user scrolls down from the top of the page
 const BackToTop = () => {

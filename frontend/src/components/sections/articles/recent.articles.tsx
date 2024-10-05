@@ -53,7 +53,7 @@ const RecentArticles: React.FC<RecentArticlesProps> = ({ mediumArticles }) => {
 								{/* Article title and link */}
 								<span className={css.header}>
                                     <a href={link} rel="noreferrer" target="_blank">
-                                        {title} <Icon icon={['fad', 'arrow-up-right-from-square']} />
+                                        {/* {title} <Icon icon={['fad', 'arrow-up-right-from-square']} /> */}
                                     </a>
                                 </span>
 								{/* Article description container */}
@@ -67,7 +67,7 @@ const RecentArticles: React.FC<RecentArticlesProps> = ({ mediumArticles }) => {
 								<span className={css.topicsContainer}>
                                     {categories.map((e: any, index: any) => (
 										<span key={index} className={css.topics}>
-                                            <Icon icon={['fab', 'medium']} /> {e}
+                                            {/* <Icon icon={['fab', 'medium']} /> {e} */}
                                         </span>
 									))}
                                 </span>

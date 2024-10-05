@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ChatIcon, PaperAirplaneIcon, XIcon } from '@heroicons/react/solid'; // Import Heroicons
+import { ChatIcon, PaperAirplaneIcon, XIcon } from '@heroicons/react/24/solid'; // Import Heroicons
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 
@@ -146,12 +146,12 @@ const Chatbot: React.FC = () => {
                             value={message}
                             onChange={handleInputChange}
                         />
-                        <PaperAirplaneIcon className="send-icon" onClick={handleSendMessage} style={{ height: 20, width: 20 }} />
+                        {/* <PaperAirplaneIcon className="send-icon" onClick={handleSendMessage} style={{ height: 20, width: 20 }} /> */}
                     </div>
                 </div>
             )}
             <div className={`chatbot-button ${isChatVisible ? 'active' : ''}`} onClick={toggleChat}>
-                {isChatVisible ? <XIcon className="close-icon" style={{ height: 20, width: 20 }} /> : <ChatIcon style={{ height: 20, width: 20 }} />}
+                {/* {isChatVisible ? <XIcon className="close-icon" style={{ height: 20, width: 20 }} /> : <ChatIcon style={{ height: 20, width: 20 }} />} */}
             </div>
         </div>
     );
