@@ -1,9 +1,7 @@
+import { useEffect, useState } from 'react';
+import { ArrowUpIcon } from '@heroicons/react/solid'; // Import the ArrowUpIcon from Heroicons
 
-import {useEffect, useState} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
-
-// this will show a "Back to Top" button when the user scrolls down from the top of the page
+// This will show a "Back to Top" button when the user scrolls down from the top of the page
 const BackToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -35,11 +33,9 @@ const BackToTop = () => {
         <>
             {isVisible && (
                 <button className="back-to-top" onClick={scrollToTop}>
-                    <FontAwesomeIcon icon={faChevronUp} />
+                    <ArrowUpIcon className="h-6 w-6" /> {/* Use Heroicon with height and width */}
                 </button>
             )}
-
-
         </>
     );
 };

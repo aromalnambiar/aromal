@@ -1,11 +1,9 @@
-
-import React, {useEffect, useState} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCommentAlt, faPaperPlane, faTimes} from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useState } from 'react';
+import { ChatIcon, PaperAirplaneIcon, XIcon } from '@heroicons/react/solid'; // Import Heroicons
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 
-const server_port = 'http://localhost:8000/api/chat/'; // change this to your server port
+const server_port = 'http://localhost:8000/api/chat/'; // Change this to your server port
 
 interface ChatMessage {
     text: string;
@@ -29,7 +27,7 @@ const Chatbot: React.FC = () => {
         };
         setChatMessages([welcomeMessage]);
 
-        const storedUserId = Cookies.get('userId'); // get the user ID from cookies
+        const storedUserId = Cookies.get('userId'); // Get the user ID from cookies
         if (storedUserId) {
             setUserId(storedUserId);
             const storedMessages = Cookies.get(`chatMessages_${storedUserId}`);
@@ -89,10 +87,6 @@ const Chatbot: React.FC = () => {
         }
     };
 
-  /*  const handleChatClose = () => {
-        setIsChatVisible(false);
-    };
-*/
     const sendMessageToServer = (message: string, userId: string) => {
         return fetch(server_port, {
             method: 'POST',
@@ -152,12 +146,12 @@ const Chatbot: React.FC = () => {
                             value={message}
                             onChange={handleInputChange}
                         />
-                        <FontAwesomeIcon icon={faPaperPlane} className="send-icon" onClick={handleSendMessage} />
+                        <PaperAirplaneIcon className="send-icon" onClick={handleSendMessage} style={{ height: 20, width: 20 }} />
                     </div>
                 </div>
             )}
             <div className={`chatbot-button ${isChatVisible ? 'active' : ''}`} onClick={toggleChat}>
-                {isChatVisible ? <FontAwesomeIcon icon={faTimes} className="close-icon" /> : <FontAwesomeIcon icon={faCommentAlt} />}
+                {isChatVisible ? <XIcon className="close-icon" style={{ height: 20, width: 20 }} /> : <ChatIcon style={{ height: 20, width: 20 }} />}
             </div>
         </div>
     );
